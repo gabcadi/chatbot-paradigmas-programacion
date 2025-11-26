@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente de Productividad</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Asistente de Productividad</h1>
+      <p>Organizá tus listas de tareas con IA :)</p>
+    </header>
+    
+    <div id="messages"></div>
+    
+    <form id="chat-form">
+      <input id="message-input" type="text" placeholder="¿Qué ocupás organizar hoy?" autocomplete="off" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Este CDN es para convertir markdown a HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/static/script.js"></script>
+
+  <footer>
+    Creado con ❤️ por Grupo 5
+  </footer>
+</body>
+</html>

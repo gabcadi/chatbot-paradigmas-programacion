@@ -1,0 +1,121 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #000000;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  width: min(800px, 100%);
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 700px;
+}
+
+header {
+  background: #0b228a;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
+
+#messages {
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8f9fa;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #10b981;
+  color: white;
+  white-space: pre-wrap;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* Esto es markdown que devuelve el bot */
+.message.bot h1, .message.bot h2, .message.bot h3, .message.bot h4 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.message.bot h1 { font-size: 1.4em; }
+.message.bot h2 { font-size: 1.3em; }
+.message.bot h3 { font-size: 1.2em; }
+.message.bot h4 { font-size: 1.1em; }
+
+.message.bot p { margin-bottom: 8px; }
+
+.message.bot ul, .message.bot ol {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.message.bot li { margin-bottom: 4px; }
+
+.message.bot strong { font-weight: 600; }
+.message.bot em { font-style: italic; }
+.message.bot code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  background: white;
+  border-radius: 0 0 12px 12px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 12px 24px;
+  background: #0b228a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { background: rgb(30, 44, 121); }
+
+footer {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bolder;
+}
